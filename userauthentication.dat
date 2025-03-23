@@ -1,0 +1,112 @@
+<div class="main-container" id="main-container">
+    <!-- Welcome Screen - Initially Visible -->
+    <div class="welcome-screen" id="welcome-screen">
+        <div class="welcome-panel left">
+            <h1>Welcome Back</h1>
+            <p>Access your account with your login credentials</p>
+            <button class="welcome-btn login" id="welcome-login-btn">Login</button>
+            <a href="adminlogin.php" class="admin-link1">I am an admin. Go to admin login page</a>
+        </div>
+        <div class="welcome-panel right">
+            <h1>Hello, Friend!</h1>
+            <p>Start your journey with us by creating an account</p>
+            <button class="welcome-btn register" id="welcome-register-btn">Register</button>
+        </div>
+    </div>
+
+    <!-- Blue Toggle Box - Initially Hidden -->
+    <div class="switch-box" id="switch-box">
+        <div class="switch-content">
+            <h2 id="switch-title">Welcome Back!</h2>
+            <p id="switch-text">Already have an account? Click below to log in.</p>
+            <button class="switch-btn" id="switch-toggle">Login</button>
+        </div>
+    </div>
+
+    <!-- Forms Container -->
+    <div class="form-wrapper">
+        <!-- Login Form -->
+        <div class="form-box left hidden" id="login-form">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" id="login-username">
+            <input type="password" placeholder="Password" id="login-password">
+            <a id="forgot-password-link">Forgot Password?</a>
+            <button class="btn" id="login-btn">Login</button>
+        </div>
+
+        <!-- Register Form -->
+        <div class="form-box right hidden" id="register-form">
+            <h2>Register</h2>
+            <form id="registration-form" enctype="multipart/form-data">
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <select name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <input type="date" name="birthdate" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="email" name="email" placeholder="Email Address" id="register-email" required>
+                <input type="text" name="address" placeholder="Home Address (Optional)">
+                <input type="file" name="profile_image" accept="image/*">
+
+                <h3>Account Information</h3>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+
+                <h3>Service Preferences</h3>
+                <input type="text" name="preferred_stylist" placeholder="Preferred Stylist">
+                <input type="text" name="frequent_services" placeholder="Frequent Services">
+                <select name="preferred_time">
+                    <option value="">Preferred Time</option>
+                    <option value="Morning">Morning</option>
+                    <option value="Evening">Evening</option>
+                </select>
+
+                <h3>Health & Safety Information</h3>
+                <input type="text" name="allergies" placeholder="Allergies">
+                <input type="text" name="medical_conditions" placeholder="Medical Conditions">
+                <button type="submit" class="btn">Register</button>
+            </form>
+            
+        </div>
+
+        <!-- Forgot Password Step 1: Email Verification -->
+        <div class="form-box left forgot-password" id="forgot-password-step1">
+            <h2>Forgot Password</h2>
+            <p>Please enter your email address to receive a verification code.</p>
+            <input type="email" placeholder="Email Address" id="forgot-email">
+            <div id="email-message"></div>
+            <button class="btn" id="verify-email-btn">Verify Email</button>
+            <button class="btn btn-secondary" id="back-to-login-btn1">Back to Login</button>
+        </div>
+
+        <!-- Forgot Password Step 2: New Password -->
+        <div class="form-box left forgot-password" id="forgot-password-step2">
+            <h2>Reset Password</h2>
+            <p>Enter your new password below.</p>
+            <div class="password-requirements">
+                <strong>Password must contain:</strong>
+                <ul>
+                    <li>At least 8 characters</li>
+                    <li>At least one uppercase letter</li>
+                    <li>At least one number</li>
+                    <li>At least one special character</li>
+                </ul>
+            </div>
+            <input type="password" placeholder="New Password" id="new-password">
+            <input type="password" placeholder="Confirm New Password" id="confirm-password">
+            <div id="password-message"></div>
+            <button class="btn" id="reset-password-btn">Reset Password</button>
+            <button class="btn btn-secondary" id="back-to-login-btn2">Back to Login</button>
+        </div>
+
+        <!-- Forgot Password Step 3: Success -->
+        <div class="form-box left forgot-password" id="forgot-password-step3">
+            <h2>Password Reset Successful</h2>
+            <p>Your password has been successfully reset.</p>
+            <p>You can now log in with your new password.</p>
+            <button class="btn" id="back-to-login-btn3">Go to Login</button>
+        </div>
+    </div>
+</div>

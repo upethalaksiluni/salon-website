@@ -1,0 +1,82 @@
+<footer class="admin-footer">
+    <div class="container-fluid">
+        <div class="row g-4 justify-content-center">
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <div class="footer-section">
+                    <h4 class="footer-title">
+                        <i class="fas fa-info-circle text-info"></i> Contact Information
+                    </h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Street, New York, USA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+012 345 67890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>admin@sulochanasalon.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- System Information -->
+            <div class="col-lg-4">
+                <div class="footer-section">
+                    <h4 class="footer-title">
+                        <i class="fas fa-server text-success"></i> System Information
+                    </h4>
+                    <ul class="system-info">
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Server Time: <?php echo date('Y-m-d H:i:s'); ?></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-database"></i>
+                            <span>Database Status: <span class="badge bg-success">Connected</span></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-code-branch"></i>
+                            <span>Version: 1.0.0</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-6 text-center">
+                    <p class="mb-0">&copy; <?php echo date('Y'); ?> Sulochana Salon. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="footer-links">
+                        <a href="admin_help.php">Help</a>
+                        <a href="admin_privacy.php">Privacy Policy</a>
+                        <a href="admin_terms.php">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Common Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/admin.js"></script>
+<script src="assets/js/custom.js"></script>
+
+<!-- Page Specific Scripts -->
+<?php if (isset($pageScripts)): ?>
+    <?php foreach ($pageScripts as $script): ?>
+        <script src="<?php echo $script; ?>"></script>
+    <?php endforeach; ?>
+<?php endif; ?>
+</body>
+</html>

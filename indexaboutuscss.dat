@@ -1,0 +1,84 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(254, 254, 254); /* Light blue background */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container for the about section */
+.salon-container {
+    display: flex;
+    flex-direction: row; /* Image left, text right */
+    max-width: 1000px;
+    background: white;
+    padding: 30px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    gap: 20px;
+}
+
+/* Image styling */
+.salon-image {
+    flex: 1;
+}
+
+.salon-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Text styling */
+.salon-description {
+    flex: 1;
+    text-align: left;
+}
+
+h1 {
+    color:rgb(0, 0, 0); /* Yellow heading */
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .salon-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .salon-image {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .salon-description {
+        text-align: center;
+    }
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px; /* Space above the link */
+    padding: 10px 15px; /* Padding for the link */
+    background-color: #ffcc00; /* Background color */
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.read-more:hover {
+    background-color: #e0b800; /* Darker background on hover */
+}

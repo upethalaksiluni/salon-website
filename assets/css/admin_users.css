@@ -1,0 +1,132 @@
+.feedback-card {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    transition: transform 0.2s ease;
+}
+
+.feedback-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.star {
+    display: inline-block;
+}
+
+.star.active {
+    color: #ffc107;
+}
+
+.feedback-comment {
+    background: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+}
+
+.services-list {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+
+/* Add these styles to your existing CSS */
+.modal-lg {
+    max-width: 800px;
+}
+
+.user-profile {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-profile img {
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-stats {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem 1rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.stat-item h5 {
+    color: #007bff;
+    margin: 0;
+}
+
+.stat-item p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.user-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.user-info-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.user-info-list li:last-child {
+    border-bottom: none;
+}
+
+.user-avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.user-stats h5 {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.user-stats p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+.user-info p {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.user-info p:last-child {
+    border-bottom: none;
+}
+
+.recent-appointments {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.badge {
+    padding: 0.5em 0.75em;
+}

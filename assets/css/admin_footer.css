@@ -1,0 +1,178 @@
+@import 'variables.css';
+
+/* Admin Footer Styles */
+.admin-footer {
+    background: linear-gradient(135deg, #1a237e, #283593);
+    color: #ffffff;
+    padding: 2rem 0 1rem;
+    margin-left: var(--sidebar-width);
+    transition: all 0.3s ease;
+}
+
+.admin-footer.collapsed {
+    margin-left: var(--sidebar-collapsed-width);
+}
+
+/* Footer Sections */
+.footer-section {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-section:hover {
+    transform: translateY(-5px);
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Quick Actions Grid */
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.quick-action-item {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.quick-action-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.quick-action-item i {
+    font-size: 1.2rem;
+    margin-right: 0.75rem;
+}
+
+/* Contact and System Information */
+.contact-info,
+.system-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li,
+.system-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.contact-info li i,
+.system-info li i {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.contact-info li span,
+.system-info li span {
+    color: rgb(255, 255, 255);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgb(255, 255, 255);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quick-actions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-section {
+        margin-bottom: 1rem;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .admin-footer {
+        margin-left: 0;
+    }
+    
+    .admin-footer.collapsed {
+        margin-left: 0;
+    }
+}
+
+.footer-bottom .copyright {
+    color: rgb(255, 255, 255);
+}
+
+/* Badge text */
+.badge.bg-success {
+    color: rgb(255, 255, 255);
+}
+
+.system-info li span .badge {
+    color: rgb(255, 255, 255);
+}
+
+.badge {
+    color: rgb(255, 255, 255);
+}
+
+.copyright-text {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.8);
+}

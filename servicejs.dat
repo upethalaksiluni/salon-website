@@ -1,0 +1,14 @@
+document.querySelectorAll('.service-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const list = header.nextElementSibling;
+                const icon = header.querySelector('i');
+                
+                if (list.style.display === 'block') {
+                    list.style.display = 'none';
+                    icon.classList.remove('active');
+                } else {
+                    list.style.display = 'block';
+                    icon.classList.add('active');
+                }
+            });
+        });

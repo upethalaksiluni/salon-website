@@ -1,0 +1,27 @@
+<div class="serheader">
+    <h1 class="vm1">Welcome to Sulochana Salon</h1>
+    <p>Where beauty meets confidence</p>
+</div>
+
+<section id="vision-mission">
+    <h2 class="vm2">Our Vision & Mission</h2>
+    <h3 class="vm3">Vision</h3>
+    <p>To be the leading salon in Colombo, renowned for exceptional beauty services and personalized care.</p>
+    <h3 class="vm3">Mission</h3>
+    <p>To enhance the natural beauty of our clients through expert techniques, high-quality products, and a relaxing environment.</p>
+</section>
+
+<section id="about">
+    <h2 class="vm2">Our Story</h2>
+    <p>Founded by Sulochana, a passionate beauty professional with over two decades of experience...</p>
+</section>
+
+<section id="services">
+    <h2 class="vm2">Our Services</h2>
+    <ul>
+        <li>Hair Services</li>
+        <li>Facial & Skin Care</li>
+        <li>Nail Care</li>
+        <li>Makeup Artistry</li>
+    </ul>
+</section>

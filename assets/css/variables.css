@@ -1,0 +1,27 @@
+:root {
+    /* Layout dimensions */
+    --header-height: 60px;
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 70px;
+    
+    /* Colors */
+    --primary-color: #1a237e;
+    --secondary-color: #283593;
+    --accent-color: #3949ab;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    
+    /* Effects */
+    --box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --border-radius: 10px;
+
+    /* Footer */
+    --footer-background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);
+    --footer-text-color: #ffffff;
+    --footer-link-color: rgba(255, 255, 255, 0.8);
+    --footer-hover-color: #ffffff;
+    --footer-border-color: rgba(255, 255, 255, 0.1);
+    --footer-section-bg: rgba(255, 255, 255, 0.1);
+    --footer-section-hover: rgba(255, 255, 255, 0.15);
+}

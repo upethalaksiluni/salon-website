@@ -1,0 +1,24 @@
+:root {
+    --header-height: 60px;
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 70px;
+    --primary-color: #4a00e0;
+    --secondary-color: #8e2de2;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --danger-color: #ff4444;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    --primary-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    
+    /* Add new variables for animations */
+    --hover-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /* Add new variables for improved spacing and animations */
+    --sidebar-padding: 1.5rem;
+    --item-spacing: 0.25rem;
+    --dashboard-icon-size: 32px;
+    --hover-transform: translateY(-1px);
+    --hover-scale: scale(1.05);
+}

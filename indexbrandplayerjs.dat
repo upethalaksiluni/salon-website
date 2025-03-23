@@ -1,0 +1,27 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const tickerWrapper = document.querySelector(".ticker-wrapper");
+    let animationPaused = false;
+
+    // Function to start animation
+    function startTicker() {
+        if (!animationPaused) {
+            tickerWrapper.style.animationPlayState = "running";
+        }
+    }
+
+    // Function to stop animation
+    function stopTicker() {
+        animationPaused = true;
+        tickerWrapper.style.animationPlayState = "paused";
+    }
+
+    // Resume when mouse leaves
+    function resumeTicker() {
+        animationPaused = false;
+        tickerWrapper.style.animationPlayState = "running";
+    }
+
+    // Event listeners
+    tickerWrapper.addEventListener("mouseenter", stopTicker);
+    tickerWrapper.addEventListener("mouseleave", resumeTicker);
+});

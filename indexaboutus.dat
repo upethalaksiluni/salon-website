@@ -1,0 +1,19 @@
+<div class="salon-container">
+        <div class="salon-image">
+            <img src="assets/images/aboutus.jpg" alt="Sulochana Salon">
+        </div>
+        <div class="salon-description">
+            <h1>About us</h1>
+            <p>
+                Sulochana Salon is a premier beauty destination renowned for its blend of contemporary styling and personalized care. 
+                With a team of highly skilled professionals, the salon offers a comprehensive range of services—from innovative 
+                haircuts and vibrant hair coloring to advanced facial treatments, expert nail care, and flawless bridal makeup.
+            </p>
+            <p>
+                Emphasizing both luxury and comfort, Sulochana Salon uses only premium products and the latest techniques to ensure 
+                every client leaves feeling confident and rejuvenated. Whether you’re looking for a quick style update or a complete 
+                transformation, Sulochana Salon delivers exceptional quality and an inviting ambiance designed to pamper and inspire.
+            </p>
+            <a href="aboutus.php" class="read-more">Read More</a>
+        </div>
+    </div>

@@ -1,0 +1,211 @@
+<footer class="client-footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-section">
+                    <h5 class="footer-title">
+                        <i class="fas fa-spa"></i>
+                        About Us
+                    </h5>
+                    <p>Sulochana Salon provides premium beauty and wellness services. Our experienced team is dedicated to making you look and feel your best.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-section">
+                    <h5 class="footer-title">
+                        <i class="fas fa-link"></i>
+                        Quick Links
+                    </h5>
+                    <ul class="footer-links">
+                        <li><a href="book_services.php"><i class="fas fa-calendar-plus"></i>Book Appointment</a></li>
+                        <li><a href="my_appointments.php"><i class="fas fa-calendar-check"></i>My Appointments</a></li>
+                        <li><a href="my_feedbacks.php"><i class="fas fa-star"></i>My Feedbacks</a></li>
+                        <li><a href="services.php"><i class="fas fa-spa"></i>Our Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-section">
+                    <h5 class="footer-title">
+                        <i class="fas fa-address-card"></i>
+                        Contact Info
+                    </h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@sulochanasalon.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Beauty Street, Fashion City</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright-text">
+            <p>&copy; <?php echo date('Y'); ?> Sulochana Salon. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+@import 'variables.css';
+
+.client-footer {
+    margin-left: 2px;
+    transition: var(--transition);
+    background: var(--secondary-gradient);
+    color: var(--text-light);
+    width: auto;
+    position: relative;
+    bottom: 0;
+}
+
+.client-footer.collapsed {
+    margin-left: var(--sidebar-collapsed-width);
+    width: calc(100% - var(--sidebar-collapsed-width));
+}
+
+.footer-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    height: 100%;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-section:hover {
+    transform: translateY(-5px);
+}
+
+.footer-title {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-links li:hover {
+    transform: translateX(5px);
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links a:hover {
+    color: var(--text-light);
+}
+
+.footer-links i {
+    width: 20px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--text-light);
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.copyright-text {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .client-footer {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .client-footer.collapsed {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .footer-section {
+        margin-bottom: 1rem;
+    }
+}
+</style>
+
+<script>
+// Update footer position when sidebar toggles
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.getElementById('clientSidebar');
+    const footer = document.querySelector('.client-footer');
+    
+    if (sidebar && footer) {
+        const sidebarObserver = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.attributeName === 'class') {
+                    footer.classList.toggle('collapsed', 
+                        sidebar.classList.contains('collapsed'));
+                }
+            });
+        });
+
+        sidebarObserver.observe(sidebar, {
+            attributes: true
+        });
+    }
+});
+</script>

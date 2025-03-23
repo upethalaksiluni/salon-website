@@ -1,0 +1,88 @@
+.feedback-card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.feedback-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.rating-display {
+    margin: 15px 0;
+}
+
+.main-content {
+    padding: 2rem 0;
+    margin-bottom: 30px;
+    margin-top: 130px;
+}
+
+.rating-display label,
+.service-quality label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #495057;
+}
+
+.stars {
+    display: inline-block;
+}
+
+.stars .fa-star {
+    color: #dee2e6;
+    font-size: 1.2em;
+    margin-right: 2px;
+    transition: color 0.3s ease;
+}
+
+.stars .fa-star.active {
+    color: #ffc107;
+}
+
+.badge {
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
+.feedback-comment {
+    background: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.appointment-details {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+}
+
+.appointment-details h6 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.appointment-details ul li {
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+
+.appointment-details i {
+    width: 20px;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.alert i {
+    margin-right: 8px;
+}

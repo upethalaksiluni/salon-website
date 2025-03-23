@@ -1,0 +1,104 @@
+/* Appointment Status Badges */
+.badge {
+    padding: 0.5em 0.8em;
+    font-weight: 500;
+}
+
+/* Action Buttons */
+.btn-group .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-group .btn i {
+    font-size: 0.875rem;
+}
+
+/* Table Styles */
+.table td {
+    vertical-align: middle;
+}
+
+.table td small {
+    font-size: 0.875rem;
+}
+
+/* Modal Styles */
+.modal-body {
+    padding: 1.5rem;
+}
+
+/* Filter Section */
+.filter-section {
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Date Range Styles */
+.date-range {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Status Colors */
+.status-pending { background-color: var(--warning-color); }
+.status-confirmed { background-color: var(--info-color); }
+.status-completed { background-color: var(--success-color); }
+.status-cancelled { background-color: var(--danger-color); }
+.status-no-show { background-color: var(--dark-color); }
+
+/* Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Appointments Page Specific Styles */
+.appointments-filters {
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.appointment-card {
+    transition: transform 0.2s;
+}
+
+.appointment-card:hover {
+    transform: translateY(-2px);
+}
+
+.status-badge {
+    padding: 0.5em 1em;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.action-buttons .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.appointment-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.appointment-details td {
+    vertical-align: middle;
+}

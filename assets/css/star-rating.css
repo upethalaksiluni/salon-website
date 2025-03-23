@@ -1,0 +1,58 @@
+.star-rating {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.stars {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    position: relative;
+}
+
+.stars input[type="radio"] {
+    display: none;
+}
+
+.stars label {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 25px;
+    transition: all 0.2s ease;
+}
+
+.stars label i {
+    color: #ddd;
+    transition: all 0.2s ease;
+}
+
+.stars input[type="radio"]:checked ~ label i,
+.stars label:hover i,
+.stars label:hover ~ label i {
+    color: #ffc107;
+}
+
+.rating-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Hover effect */
+.stars:hover label i {
+    color: #ffc107;
+}
+
+.stars label:hover ~ label i {
+    color: #ddd;
+}
+
+/* Selected state */
+.stars input[type="radio"]:checked + label i {
+    animation: pulse 0.2s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}

@@ -1,0 +1,55 @@
+<div class="admin-sidebar">
+    <div class="sidebar-header">
+        <h4>Admin Dashboard</h4>
+    </div>
+    <ul class="sidebar-menu">
+        <li class="<?php echo $activePage == 'dashboard' ? 'active' : ''; ?>">
+            <a href="admindashboard.php" class="dashboard-view-link">
+                <i class="fas fa-chart-line"></i>
+                <span>View Dashboard</span>
+            </a>
+        </li>
+        <li class="<?php echo $activePage == 'admins' ? 'active' : ''; ?>">
+            <a href="manage_admins.php">
+                <i class="fas fa-user-shield"></i>
+                <span>Manage Admins</span>
+            </a>
+        </li>
+        <li class="<?php echo $activePage == 'appointments' ? 'active' : ''; ?>">
+            <a href="admin_appointments.php">
+                <i class="fas fa-calendar-check"></i>
+                <span>Appointments</span>
+            </a>
+        </li>
+        <li class="<?php echo $activePage == 'services' ? 'active' : ''; ?>">
+            <a href="admin_services.php">
+                <i class="fas fa-cut"></i>
+                <span>Services</span>
+            </a>
+        </li>
+        <li class="<?php echo $activePage == 'stylists' ? 'active' : ''; ?>">
+            <a href="admin_stylists.php">
+                <i class="fas fa-user-tie"></i>
+                <span>Stylists</span>
+            </a>
+        </li>
+        <li class="<?php echo $activePage == 'users' ? 'active' : ''; ?>">
+            <a href="admin_users.php">
+                <i class="fas fa-users"></i>
+                <span>Users</span>
+            </a>
+        </li>
+        <li class="<?php echo $activePage == 'reports' ? 'active' : ''; ?>">
+            <a href="admin_reports.php">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+        </li>
+        <li class="<?php echo $activePage == 'feedbacks' ? 'active' : ''; ?>">
+            <a href="admin_feedbacks.php">
+                <i class="fas fa-comments"></i>
+                <span>Feedbacks</span>
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,21 @@
+const list = document.querySelectorAll('.list');
+
+function activeLink() {
+    list.forEach(item => item.classList.remove("active"));
+    this.classList.add("active");
+}
+
+list.forEach(item => item.addEventListener("click", activeLink));
+
+const userIcon = document.querySelector('.user-icon');
+const userDropdown = document.getElementById('userDropdown');
+
+userIcon.addEventListener('click', function() {
+    userDropdown.classList.toggle('show');
+});
+
+document.addEventListener('click', function(e) {
+    if (!userIcon.contains(e.target)) {
+        userDropdown.classList.remove('show');
+    }
+});

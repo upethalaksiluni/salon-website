@@ -1,0 +1,27 @@
+<div class="containerindex">
+        <h2 class="sulo">CREATING A BEAUTIFUL COMMUNITY</h2>
+        <p class="sub">Naturals is that place to detox, rejuvenate and relax!</p>
+        <h1 class="mainheading">Look good, Feel good!</h1>
+        <div class="features1">
+            <div class="feature1">
+                <h3 class="sulo1">INSPIRE</h3>
+                <p class="sulo2">Inspire the Sri Lankan society to be well groomed & embrace life to their full potential</p>
+            </div>
+            <div class="feature1">
+                <h3 class="sulo1">EMPOWER</h3>
+                <p class="sulo2">We employ talent that is qualified through the national vocational education and lead them to a better life</p>
+            </div>
+            <div class="feature1">
+                <h3 class="sulo1">AFFORDABLE</h3>
+                <p class="sulo2">At a very attractive price a service that leaves a smile on you</p>
+            </div>
+            <div class="feature1">
+                <h3 class="sulo1">AMBIENCE</h3>
+                <p class="sulo2">Designed with state-of-the-art equipment and a welcoming ambience soothing to eyes & mind.</p>
+            </div>
+            <div class="feature1">
+                <h3 class="sulo1">SAFE</h3>
+                <p class="sulo2">The first salon to receive a COVID-19 Controlled Certification by Sri Lanka Standards Institute</p>
+            </div>
+        </div>
+    </div>

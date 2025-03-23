@@ -1,0 +1,4 @@
+/* JavaScript File: script.dat */
+document.addEventListener("DOMContentLoaded", function () {
+    alert("Welcome to Sulochana Salon! Experience beauty like never before.");
+});

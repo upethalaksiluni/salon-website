@@ -1,0 +1,53 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header styling */
+.serheader {
+    background-color: #b565a7;
+    color: white;
+    width: 1000px;
+    max-width: 1000px;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Section box styling */
+section {
+    width: 1000px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    text-align: center;
+}
+
+/* Text styling */
+.vm1 {
+    color: rgb(211, 75, 45);
+}
+
+.vm2 {
+    color: rgb(164, 93, 42);
+}
+
+.vm3 {
+    color: rgb(172, 59, 162);
+}
+
+p {
+    color: rgb(0, 0, 0);
+}

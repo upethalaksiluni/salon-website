@@ -1,0 +1,23 @@
+:root {
+    /* Layout dimensions */
+    --header-height: 60px;
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 70px;
+    
+    /* Colors */
+    --primary-color: #2193b0;
+    --secondary-color: #834d9b;
+    --accent-color: #6dd5ed;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    
+    /* Gradients */
+    --primary-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --secondary-gradient: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    
+    /* Effects */
+    --box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --border-radius: 10px;
+    --hover-transform: translateY(-2px);
+}

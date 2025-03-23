@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $pageTitle; ?> - Sulochana Salon</title>
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/admin_layout.css">
+    <link rel="stylesheet" href="assets/css/admin_header.css">
+    <link rel="stylesheet" href="assets/css/admin_sidebar.css">
+    <link rel="stylesheet" href="assets/css/admin_footer.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    
+    <!-- Page Specific CSS -->
+    <?php if (isset($pageStyles)): ?>
+        <?php foreach ($pageStyles as $style): ?>
+            <link rel="stylesheet" href="<?php echo $style; ?>">
+        <?php endforeach; ?>
+    <?php endif; ?>
+</head>
+<body>
+<header class="admin-header fixed-top">
+    <nav class="navbar navbar-expand-lg bg-gradient">
+        <div class="container-fluid">
+            <button id="sidebarToggle" class="btn btn-link text-light me-3">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <a class="navbar-brand d-flex align-items-center" href="admindashboard.php">
+                <img src="<?php 
+                    echo file_exists('assets/images/logo.png') ? 
+                        'assets/images/logo.png' : 
+                        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8/x8AAtsB8gAAAABJRU5ErkJggg=='; 
+                ?>" 
+                    alt="Sulochana Salon" 
+                    class="logo-img me-2" 
+                    height="40"
+                    onerror="this.style.display='none'">
+                <span class="brand-text text-light">Admin Panel</span>
+            </a>
+
+            <div class="ms-auto d-flex align-items-center">
+                <div class="notifications me-3">
+                    <a href="notifications.php" class="btn btn-light position-relative">
+                        <i class="fas fa-bell"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" 
+                              id="notificationBadge">
+                        </span>
+                    </a>
+                </div>
+                
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="adminDropdown" 
+                            data-bs-toggle="dropdown">
+                        <i class="fas fa-user-shield"></i>
+                        <?php echo $_SESSION['admin_username'] ?? 'Admin'; ?>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item" href="admin_profile.php">
+                                <i class="fas fa-user"></i> My Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="change_password.php">
+                                <i class="fas fa-key"></i> Change Password
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item text-danger" href="admin_process.php?action=logout">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery (required for some Bootstrap features) -->
+<script src="assets/js/jquery.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="assets/js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+@import 'variables.css';
+
+/* Admin Header Styles */
+.admin-header {
+    height: var(--header-height);
+    background: var(--secondary-gradient);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    box-shadow: var(--box-shadow);
+    transition: margin-left 0.3s ease;
+}
+
+/* Navbar Styles */
+.navbar {
+    height: 100%;
+    padding: 0.75rem 1rem;
+}
+
+.navbar-brand {
+    color: var(--text-light) !important;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Toggle Button */
+#sidebarToggle {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: var(--transition);
+}
+
+#sidebarToggle:hover {
+    transform: scale(1.1);
+}
+
+/* Notifications */
+.notifications .btn {
+    background: rgb(255, 255, 255);
+    color: #333333;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.notifications .btn:hover {
+    background: #f8f9fa;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+#notificationBadge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Admin Dropdown */
+#adminDropdown {
+    background: rgb(255, 255, 255);
+    color: #333333;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#adminDropdown:hover {
+    background: #f8f9fa;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    margin-top: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.75rem 1rem;
+    color: #333333;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item i {
+    margin-right: 0.5rem;
+    width: 20px;
+}
+
+.dropdown-item:hover {
+    background: #f8f9fa;
+    color: var(--primary-color);
+}
+
+/* Logo */
+.logo-img {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .brand-text {
+        font-size: 1rem;
+    }
+
+    #adminDropdown {
+        padding: 0.4rem 0.75rem;
+    }
+
+    .notifications .btn {
+        padding: 0.4rem 0.6rem;
+    }
+}

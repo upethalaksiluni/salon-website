@@ -1,0 +1,374 @@
+// DOM elements
+const container = document.getElementById('main-container');
+const welcomeScreen = document.getElementById('welcome-screen');
+const welcomeLoginBtn = document.getElementById('welcome-login-btn');
+const welcomeRegisterBtn = document.getElementById('welcome-register-btn');
+const switchBox = document.getElementById('switch-box');
+const switchBtn = document.getElementById('switch-toggle');
+const switchTitle = document.getElementById('switch-title');
+const switchText = document.getElementById('switch-text');
+
+// Forms
+const loginForm = document.getElementById('login-form');
+const registerForm = document.getElementById('register-form');
+
+// Forgot password forms
+const forgotPasswordStep1 = document.getElementById('forgot-password-step1');
+const forgotPasswordStep2 = document.getElementById('forgot-password-step2');
+const forgotPasswordStep3 = document.getElementById('forgot-password-step3');
+
+// Forgot password links and buttons
+const forgotPasswordLink = document.getElementById('forgot-password-link');
+const verifyEmailBtn = document.getElementById('verify-email-btn');
+const resetPasswordBtn = document.getElementById('reset-password-btn');
+const backToLoginBtn1 = document.getElementById('back-to-login-btn1');
+const backToLoginBtn2 = document.getElementById('back-to-login-btn2');
+const backToLoginBtn3 = document.getElementById('back-to-login-btn3');
+
+// Toggle state
+let isLoginView = false;
+
+// Function to hide welcome screen and show login form
+function showLoginFromWelcome() {
+    welcomeScreen.classList.add('hidden');
+    
+    // Set up for login view
+    switchBox.classList.add('right');
+    switchTitle.textContent = "Hello, Welcome!";
+    switchText.textContent = "Don't have an account? Click below to register.";
+    switchBtn.textContent = "Register";
+    
+    setTimeout(() => {
+        loginForm.classList.remove('hidden');
+        registerForm.classList.add('hidden');
+    }, 300);
+    
+    isLoginView = true;
+}
+
+// Function to hide welcome screen and show register form
+function showRegisterFromWelcome() {
+    welcomeScreen.classList.add('hidden');
+    
+    // Set up for register view
+    switchBox.classList.remove('right');
+    switchTitle.textContent = "Welcome Back!";
+    switchText.textContent = "Already have an account? Click below to log in.";
+    switchBtn.textContent = "Login";
+    
+    setTimeout(() => {
+        registerForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+    }, 300);
+    
+    // Adjust container height for register form
+    container.style.height = "700px";
+    
+    isLoginView = false;
+}
+
+// Function to show the login form
+function showLoginForm() {
+    loginForm.classList.remove('hidden');
+    registerForm.classList.add('hidden');
+    
+    // Hide forgot password forms
+    forgotPasswordStep1.style.display = 'none';
+    forgotPasswordStep2.style.display = 'none';
+    forgotPasswordStep3.style.display = 'none';
+    
+    // Update toggle button
+    switchBox.classList.add('right');
+    switchTitle.textContent = "Hello, Welcome!";
+    switchText.textContent = "Don't have an account? Click below to register.";
+    switchBtn.textContent = "Register";
+    
+    // Reset container height
+    container.style.height = "500px";
+    
+    isLoginView = true;
+}
+
+// Function to show the register form
+function showRegisterForm() {
+    loginForm.classList.add('hidden');
+    registerForm.classList.remove('hidden');
+    
+    // Hide forgot password forms
+    forgotPasswordStep1.style.display = 'none';
+    forgotPasswordStep2.style.display = 'none';
+    forgotPasswordStep3.style.display = 'none';
+    
+    // Update toggle button
+    switchBox.classList.remove('right');
+    switchTitle.textContent = "Welcome Back!";
+    switchText.textContent = "Already have an account? Click below to log in.";
+    switchBtn.textContent = "Login";
+    
+    // Adjust container height for register form
+    container.style.height = "700px";
+    
+    isLoginView = false;
+}
+
+// Function to show the forgot password form (step 1)
+function showForgotPasswordStep1() {
+    loginForm.classList.add('hidden');
+    registerForm.classList.add('hidden');
+    
+    forgotPasswordStep1.style.display = 'flex';
+    forgotPasswordStep2.style.display = 'none';
+    forgotPasswordStep3.style.display = 'none';
+    
+    // Adjust container height if needed
+    container.style.height = "500px";
+}
+
+// Function to show the forgot password reset form (step 2)
+function showForgotPasswordStep2() {
+    forgotPasswordStep1.style.display = 'none';
+    forgotPasswordStep2.style.display = 'flex';
+    forgotPasswordStep3.style.display = 'none';
+}
+
+// Function to show the password reset success message (step 3)
+function showForgotPasswordStep3() {
+    forgotPasswordStep1.style.display = 'none';
+    forgotPasswordStep2.style.display = 'none';
+    forgotPasswordStep3.style.display = 'flex';
+}
+
+// Event Listeners for welcome screen buttons
+welcomeLoginBtn.addEventListener('click', showLoginFromWelcome);
+welcomeRegisterBtn.addEventListener('click', showRegisterFromWelcome);
+
+// Toggle between login and register forms
+switchBtn.addEventListener('click', () => {
+    if (!isLoginView) {
+        showLoginForm();
+    } else {
+        showRegisterForm();
+    }
+});
+
+// Show forgot password form when "Forgot Password?" is clicked
+forgotPasswordLink.addEventListener('click', showForgotPasswordStep1);
+
+// Back to login buttons from forgot password steps
+backToLoginBtn1.addEventListener('click', showLoginForm);
+backToLoginBtn2.addEventListener('click', showLoginForm);
+backToLoginBtn3.addEventListener('click', showLoginForm);
+
+// Handle verification (API call)
+verifyEmailBtn.addEventListener('click', () => {
+    const emailInput = document.getElementById('forgot-email').value;
+    const emailMessage = document.getElementById('email-message');
+    
+    if (!emailInput) {
+        emailMessage.className = 'message error';
+        emailMessage.textContent = 'Please enter a valid email.';
+        return;
+    }
+    
+    // Create form data and submit
+    const formData = new FormData();
+    formData.append('action', 'verify_email');
+    formData.append('email', emailInput);
+    
+    fetch('api.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            emailMessage.className = 'message success';
+            emailMessage.textContent = data.message;
+            
+            setTimeout(() => {
+                showForgotPasswordStep2();
+            }, 1000);
+        } else {
+            emailMessage.className = 'message error';
+            emailMessage.textContent = data.message;
+        }
+    })
+    .catch(error => {
+        emailMessage.className = 'message error';
+        emailMessage.textContent = 'An error occurred. Please try again.';
+        console.error('Error:', error);
+    });
+});
+
+// Handle password reset (API call)
+resetPasswordBtn.addEventListener('click', () => {
+    const newPassword = document.getElementById('new-password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    const passwordMessage = document.getElementById('password-message');
+    
+    if (!newPassword || !confirmPassword) {
+        passwordMessage.className = 'message error';
+        passwordMessage.textContent = 'Please fill in all fields.';
+        return;
+    }
+    
+    if (newPassword !== confirmPassword) {
+        passwordMessage.className = 'message error';
+        passwordMessage.textContent = 'Passwords do not match.';
+        return;
+    }
+    
+    // Basic password validation
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+    if (!passwordRegex.test(newPassword)) {
+        passwordMessage.className = 'message error';
+        passwordMessage.textContent = 'Password does not meet the requirements.';
+        return;
+    }
+    
+    // Create form data and submit
+    const formData = new FormData();
+    formData.append('action', 'reset_password');
+    formData.append('new_password', newPassword);
+    formData.append('confirm_password', confirmPassword);
+    
+    fetch('api.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            passwordMessage.className = 'message success';
+            passwordMessage.textContent = data.message;
+            
+            setTimeout(() => {
+                showForgotPasswordStep3();
+            }, 1000);
+        } else {
+            passwordMessage.className = 'message error';
+            passwordMessage.textContent = data.message;
+        }
+    })
+    .catch(error => {
+        passwordMessage.className = 'message error';
+        passwordMessage.textContent = 'An error occurred. Please try again.';
+        console.error('Error:', error);
+    });
+});
+
+// Handle login form submission (API call)
+document.getElementById('login-btn').addEventListener('click', () => {
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+    
+    if (!username || !password) {
+        alert('Please enter both username and password.');
+        return;
+    }
+    
+    // Create form data and submit
+    const formData = new FormData();
+    formData.append('action', 'login');
+    formData.append('username', username);
+    formData.append('password', password);
+    
+    fetch('api.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            window.location.href = 'client_dashboard.php'; // Changed from dashboard.php
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => {
+        alert('An error occurred. Please try again.');
+        console.error('Error:', error);
+    });
+});
+
+// Handle registration form submission (API call)
+document.getElementById('registration-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Check if required fields are filled
+    const requiredFields = ['fullname', 'gender', 'birthdate', 'phone', 'email', 'username', 'password'];
+    let missingFields = [];
+    
+    requiredFields.forEach(field => {
+        const input = document.querySelector(`[name="${field}"]`);
+        if (!input || !input.value.trim()) {
+            missingFields.push(field);
+        }
+    });
+    
+    if (missingFields.length > 0) {
+        alert('Please fill in all required fields: ' + missingFields.join(', '));
+        return;
+    }
+    
+    // Create form data with all form fields
+    const formData = new FormData(e.target);
+    formData.append('action', 'register');
+    
+    // Debug - check what's being sent
+    console.log('Submitting registration with fields:');
+    for (let pair of formData.entries()) {
+        console.log(pair[0] + ': ' + pair[1]);
+    }
+    
+    fetch('api.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Registration response:', data);
+        if (data.success) {
+            alert(data.message);
+            if (data.redirect) {
+                window.location.href = data.redirect;
+            } else {
+                showLoginForm();
+            }
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => {
+        alert('An error occurred. Please try again.');
+        console.error('Error:', error);
+    });
+});
+
+// Check URL parameters for login display
+window.addEventListener('load', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('login') === 'true') {
+        showLoginFromWelcome();
+    }
+    
+    // Add admin login links to both forms
+    addAdminLoginLinks();
+});
+
+// Function to add admin login links
+function addAdminLoginLinks() {
+    // Add admin link to login form
+    const loginAdminLink = document.createElement('a');
+    loginAdminLink.href = 'adminlogin.php';
+    loginAdminLink.className = 'admin-link';
+    loginAdminLink.textContent = 'I am an admin. Go to admin login page';
+    loginForm.appendChild(loginAdminLink);
+    
+    // Add admin link to register form
+    const registerAdminLink = document.createElement('a');
+    registerAdminLink.href = 'adminlogin.php';
+    registerAdminLink.className = 'admin-link';
+    registerAdminLink.textContent = 'I am an admin. Go to admin login page';
+    registerForm.appendChild(registerAdminLink);
+}

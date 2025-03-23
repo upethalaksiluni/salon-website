@@ -1,0 +1,57 @@
+.main-content {
+    padding: 2rem 0;
+    margin-bottom: 30px;
+    margin-top: 130px;
+}
+
+.appointment-card {
+    transition: var(--transition);
+    border: none;
+    box-shadow: var(--box-shadow);
+}
+
+.appointment-card:hover {
+    transform: var(--hover-transform);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.appointment-card .card-header {
+    background: var(--primary-gradient);
+    color: white;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 1rem 1.5rem;
+}
+
+.appointment-card .badge {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.appointment-card .card-body {
+    padding: 1.5rem;
+}
+
+.appointment-card .card-footer {
+    background: none;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.appointment-card i {
+    width: 20px;
+    text-align: center;
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.btn-action {
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-action:hover {
+    transform: var(--hover-transform);
+}

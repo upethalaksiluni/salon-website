@@ -1,0 +1,86 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.containerindex {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 60px 40px; /* Increased padding for top and bottom */
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Heading */
+.mainheading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* Sub Heading */
+.sub {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Feature Section */
+.features1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Individual Feature Box */
+.feature1 {
+    background-color: #ecf0f1;
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.feature1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading inside Features */
+.sulo1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Description Text inside Features */
+.sulo2 {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .feature1 {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature1 {
+        width: 100%;
+    }
+}

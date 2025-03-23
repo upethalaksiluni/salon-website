@@ -1,0 +1,99 @@
+<div class="services-container">
+        
+        <h2>Hair Services</h2>
+        <ul class="service-list">
+            <li>
+                <img src="images/haircut.jpg" alt="Haircut">
+                <h3>Haircut (Men, Women, Kids)</h3>
+                <p>Get a stylish and professional haircut tailored to your look.</p>
+            </li>
+            <li>
+                <img src="images/haircolor.jpg" alt="Hair Coloring">
+                <h3>Hair Coloring</h3>
+                <p>Transform your hair with rich, vibrant, and long-lasting colors.</p>
+            </li>
+            <li>
+                <img src="images/highlights.jpg" alt="Hair Highlights">
+                <h3>Hair Highlights & Balayage</h3>
+                <p>Add natural-looking depth and dimension to your hair.</p>
+            </li>
+            <li>
+                <img src="images/hairspa.jpg" alt="Hair Spa">
+                <h3>Hair Spa & Treatments</h3>
+                <p>Deep conditioning treatments like Keratin, Protein, and Botox.</p>
+            </li>
+            <li>
+                <img src="images/straightening.jpg" alt="Hair Straightening">
+                <h3>Hair Straightening & Smoothening</h3>
+                <p>Achieve silky, straight hair with professional techniques.</p>
+            </li>
+            <li>
+                <img src="images/blowdry.jpg" alt="Blow Dry">
+                <h3>Blow-dry & Styling</h3>
+                <p>Get a polished, voluminous look for any occasion.</p>
+            </li>
+            <li>
+                <img src="images/bridal.jpg" alt="Bridal Hairstyles">
+                <h3>Bridal & Party Hairstyles</h3>
+                <p>Elegant hairstyles designed for weddings and special events.</p>
+            </li>
+        </ul>
+
+        <h2>Facial & Skin Care Services</h2>
+        <ul class="service-list">
+            <li>
+                <img src="images/facial.jpg" alt="Facial">
+                <h3>Basic & Advanced Facials</h3>
+                <p>Nourish and rejuvenate your skin with our facial treatments.</p>
+            </li>
+            <li>
+                <img src="images/acne.jpg" alt="Acne Treatment">
+                <h3>Acne Treatment</h3>
+                <p>Reduce acne and improve skin texture with expert care.</p>
+            </li>
+            <li>
+                <img src="images/cleanup.jpg" alt="Face Cleanup">
+                <h3>Face Cleanup</h3>
+                <p>Remove dirt, excess oil, and impurities for fresh skin.</p>
+            </li>
+            <li>
+                <img src="images/skinpolish.jpg" alt="Skin Polishing">
+                <h3>Skin Polishing</h3>
+                <p>Exfoliate and brighten your skin with a gentle polish.</p>
+            </li>
+        </ul>
+
+        <h2>Nail Care Services</h2>
+        <ul class="service-list">
+            <li>
+                <img src="images/manicure.jpg" alt="Manicure">
+                <h3>Manicure</h3>
+                <p>Pamper your hands with basic, gel, acrylic, and French styles.</p>
+            </li>
+            <li>
+                <img src="images/pedicure.jpg" alt="Pedicure">
+                <h3>Pedicure</h3>
+                <p>Give your feet a refreshing and nourishing experience.</p>
+            </li>
+            <li>
+                <img src="images/nailart.jpg" alt="Nail Art">
+                <h3>Nail Extensions & Nail Art</h3>
+                <p>Enhance your nails with creative and stylish designs.</p>
+            </li>
+        </ul>
+
+        <h2>Makeup Services</h2>
+        <ul class="service-list">
+            <li>
+                <img src="images/bridalmakeup.jpg" alt="Bridal Makeup">
+                <h3>Bridal Makeup</h3>
+                <p>Look flawless on your big day with professional makeup.</p>
+            </li>
+            <li>
+                <img src="images/partymakeup.jpg" alt="Party Makeup">
+                <h3>Party & Evening Makeup</h3>
+                <p>Glam up for any party or event.</p>
+            </li>
+        </ul>
+
+    </div>
