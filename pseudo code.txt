@@ -1,0 +1,330 @@
+
+1. USER AUTHENTICATION MODULE
+   
+   CLASS UserAuthentication:
+       PROPERTIES:
+           - userID
+           - username
+           - password
+           - role (client/admin)
+           
+       METHODS:
+           login():
+               - Validate credentials
+               - Create session
+               - Redirect based on role
+           
+           register():
+               - Validate input
+               - Check username availability
+               - Hash password
+               - Create user record
+           
+           resetPassword():
+               - Verify email
+               - Send reset link
+               - Update password
+   
+
+2. APPOINTMENT MANAGEMENT
+   
+   CLASS AppointmentHandler:
+       METHODS:
+           bookAppointment():
+               - Validate available slots
+               - Check stylist availability
+               - Calculate total cost
+               - Create appointment record
+               - Send confirmation notification
+           
+           updateAppointmentStatus():
+               - Verify authorization
+               - Update status
+               - Send notification
+           
+           cancelAppointment():
+               - Check cancellation eligibility
+               - Update status
+               - Notify relevant parties
+   
+
+3. ADMIN DASHBOARD
+   
+   CLASS AdminDashboard:
+       METHODS:
+           viewStatistics():
+               - Calculate daily appointments
+               - Calculate revenue
+               - Show pending appointments
+               
+           manageStylists():
+               - Add/Edit/Delete stylists
+               - Update availability
+               - View performance
+           
+           manageServices():
+               - Add/Edit/Delete services
+               - Update pricing
+               - Categorize services
+   
+
+4. NOTIFICATION SYSTEM
+   
+   CLASS NotificationHandler:
+       PROPERTIES:
+           - notificationID
+           - receiverType (client/admin)
+           - message
+           - status
+           
+       METHODS:
+           createNotification():
+               - Set notification details
+               - Save to database
+           
+           markAsRead():
+               - Update read status
+           
+           getUnreadCount():
+               - Count unread notifications
+           
+           sendNotification():
+               - Format message
+               - Deliver to recipient
+   
+
+5. FEEDBACK SYSTEM
+   
+   CLASS FeedbackHandler:
+       METHODS:
+           submitFeedback():
+               - Validate appointment completion
+               - Save rating and comments
+               - Notify admin
+           
+           viewFeedback():
+               - Filter by date/stylist
+               - Calculate average ratings
+               - Display comments
+   
+
+6. CLIENT PORTAL
+   
+   CLASS ClientDashboard:
+       METHODS:
+           viewAppointments():
+               - Show upcoming appointments
+               - Display appointment history
+               - Allow cancellation/rescheduling
+           
+           viewProfile():
+               - Display user information
+               - Allow profile updates
+               - Show service history
+   
+
+7. DATABASE STRUCTURE
+   
+   TABLES:
+       users:
+           - id, username, password, role, status
+       
+       appointments:
+           - id, user_id, stylist_id, date, time, status
+       
+       services:
+           - id, name, price, duration, category
+       
+       stylists:
+           - id, name, specialization, status
+       
+       feedback:
+           - id, appointment_id, rating, comments
+       
+       notifications:
+           - id, user_id, type, message, read_status
+   
+
+8. UTILITY FUNCTIONS
+   
+   FUNCTION validateDateTime():
+       - Check business hours
+       - Verify future date
+       - Check availability
+
+   FUNCTION calculatePrice():
+       - Sum service costs
+       - Apply discounts
+       - Return total
+
+   FUNCTION checkAvailability():
+       - Check date/time slot
+       - Verify stylist schedule
+       - Return available slots
+   
+
+This pseudo code provides a high-level overview of the system's main components and their interactions. Each module can be expanded with more detailed functionality as needed.SYSTEM: Sulochana Salon Management System
+
+1. USER AUTHENTICATION MODULE
+   
+   CLASS UserAuthentication:
+       PROPERTIES:
+           - userID
+           - username
+           - password
+           - role (client/admin)
+           
+       METHODS:
+           login():
+               - Validate credentials
+               - Create session
+               - Redirect based on role
+           
+           register():
+               - Validate input
+               - Check username availability
+               - Hash password
+               - Create user record
+           
+           resetPassword():
+               - Verify email
+               - Send reset link
+               - Update password
+   
+
+2. APPOINTMENT MANAGEMENT
+   
+   CLASS AppointmentHandler:
+       METHODS:
+           bookAppointment():
+               - Validate available slots
+               - Check stylist availability
+               - Calculate total cost
+               - Create appointment record
+               - Send confirmation notification
+           
+           updateAppointmentStatus():
+               - Verify authorization
+               - Update status
+               - Send notification
+           
+           cancelAppointment():
+               - Check cancellation eligibility
+               - Update status
+               - Notify relevant parties
+   
+
+3. ADMIN DASHBOARD
+   
+   CLASS AdminDashboard:
+       METHODS:
+           viewStatistics():
+               - Calculate daily appointments
+               - Calculate revenue
+               - Show pending appointments
+               
+           manageStylists():
+               - Add/Edit/Delete stylists
+               - Update availability
+               - View performance
+           
+           manageServices():
+               - Add/Edit/Delete services
+               - Update pricing
+               - Categorize services
+   
+
+4. NOTIFICATION SYSTEM
+   
+   CLASS NotificationHandler:
+       PROPERTIES:
+           - notificationID
+           - receiverType (client/admin)
+           - message
+           - status
+           
+       METHODS:
+           createNotification():
+               - Set notification details
+               - Save to database
+           
+           markAsRead():
+               - Update read status
+           
+           getUnreadCount():
+               - Count unread notifications
+           
+           sendNotification():
+               - Format message
+               - Deliver to recipient
+   
+
+5. FEEDBACK SYSTEM
+   
+   CLASS FeedbackHandler:
+       METHODS:
+           submitFeedback():
+               - Validate appointment completion
+               - Save rating and comments
+               - Notify admin
+           
+           viewFeedback():
+               - Filter by date/stylist
+               - Calculate average ratings
+               - Display comments
+   
+
+6. CLIENT PORTAL
+   
+   CLASS ClientDashboard:
+       METHODS:
+           viewAppointments():
+               - Show upcoming appointments
+               - Display appointment history
+               - Allow cancellation/rescheduling
+           
+           viewProfile():
+               - Display user information
+               - Allow profile updates
+               - Show service history
+   
+
+7. DATABASE STRUCTURE
+   
+   TABLES:
+       users:
+           - id, username, password, role, status
+       
+       appointments:
+           - id, user_id, stylist_id, date, time, status
+       
+       services:
+           - id, name, price, duration, category
+       
+       stylists:
+           - id, name, specialization, status
+       
+       feedback:
+           - id, appointment_id, rating, comments
+       
+       notifications:
+           - id, user_id, type, message, read_status
+   
+
+8. UTILITY FUNCTIONS
+   
+   FUNCTION validateDateTime():
+       - Check business hours
+       - Verify future date
+       - Check availability
+
+   FUNCTION calculatePrice():
+       - Sum service costs
+       - Apply discounts
+       - Return total
+
+   FUNCTION checkAvailability():
+       - Check date/time slot
+       - Verify stylist schedule
+       - Return available slots
+   
